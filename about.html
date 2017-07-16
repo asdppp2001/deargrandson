@@ -1,0 +1,587 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>EldersCare a Charity Category Flat Bootstrap Responsive Website Template | About :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="EldersCare Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css" integrity="sha512-wcw6ts8Anuw10Mzh9Ytw4pylW8+NAD4ch3lqm9lzAsTxg0GFeJgoAtxuCLREZSC5lUXdVyo/7yfsqFjQ4S+aKw==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js" integrity="sha512-mNqn2Wg7tSToJhvHcqfzLMU6J4mkOImSPTxVZAdo+lcPlk+GhZmYgACEe0x35K7YzW1zJ7XyJV/TT1MrdXvMcA==" crossorigin=""></script>
+
+
+	<style>
+  .content h1 {
+  	text-align: center;
+  }
+  .content .content-footer p {
+  	color: #6d6d6d;
+      font-size: 12px;
+      text-align: center;
+  }
+  .content .content-footer p a {
+  	color: inherit;
+  	font-weight: bold;
+  }
+
+  /*	--------------------------------------------------
+  	:: Table Filter
+  	-------------------------------------------------- */
+  .panel {
+  	border: 1px solid #ddd;
+  	background-color: #fcfcfc;
+  }
+  .panel .btn-group {
+  	margin: 15px 0 30px;
+  }
+  .panel .btn-group .btn {
+  	transition: background-color .3s ease;
+  }
+  .table-filter {
+  	background-color: #fff;
+  	border-bottom: 1px solid #eee;
+  }
+  .table-filter tbody tr:hover {
+  	cursor: pointer;
+  	background-color: #eee;
+  }
+  .table-filter tbody tr td {
+  	padding: 10px;
+  	vertical-align: middle;
+  	border-top-color: #eee;
+  }
+  .table-filter tbody tr.selected td {
+  	background-color: #eee;
+  }
+  .table-filter tr td:first-child {
+  	width: 38px;
+  }
+  .table-filter tr td:nth-child(2) {
+  	width: 35px;
+  }
+  .ckbox {
+  	position: relative;
+  }
+  .ckbox input[type="checkbox"] {
+  	opacity: 0;
+  }
+  .ckbox label {
+  	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;
+  	user-select: none;
+  }
+  .ckbox label:before {
+  	content: '';
+  	top: 1px;
+  	left: 0;
+  	width: 18px;
+  	height: 18px;
+  	display: block;
+  	position: absolute;
+  	border-radius: 2px;
+  	border: 1px solid #bbb;
+  	background-color: #fff;
+  }
+  .ckbox input[type="checkbox"]:checked + label:before {
+  	border-color: #2BBCDE;
+  	background-color: #2BBCDE;
+  }
+  .ckbox input[type="checkbox"]:checked + label:after {
+  	top: 3px;
+  	left: 3.5px;
+  	content: '\e013';
+  	color: #fff;
+  	font-size: 11px;
+  	font-family: 'Glyphicons Halflings';
+  	position: absolute;
+  }
+  .table-filter .star {
+  	color: #ccc;
+  	text-align: center;
+  	display: block;
+  }
+  .table-filter .star.star-checked {
+  	color: #F0AD4E;
+  }
+  .table-filter .star:hover {
+  	color: #ccc;
+  }
+  .table-filter .star.star-checked:hover {
+  	color: #F0AD4E;
+  }
+  .table-filter .media-photo {
+  	width: 80px;
+  }
+  .table-filter .media-body {
+
+      /* Had to use this style to force the div to expand (wasn't necessary with my bootstrap version 3.3.6) */
+  }
+  .table-filter .media-meta {
+  	font-size: 11px;
+  	color: #999;
+  }
+  .table-filter .media .title {
+  	color: #2BBCDE;
+  	font-size: 14px;
+  	font-weight: bold;
+  	line-height: normal;
+  	margin: 0;
+  }
+  .table-filter .media .title span {
+  	font-size: .8em;
+  	margin-right: 20px;
+  }
+  .table-filter .media .title span.pagado {
+  	color: #5cb85c;
+  }
+  .table-filter .media .title span.pendiente {
+  	color: #f0ad4e;
+  }
+  .table-filter .media .title span.cancelado {
+  	color: #d9534f;
+  }
+  .table-filter .media .summary {
+  	font-size: 14px;
+  }
+
+		#map {
+			width: 750px;
+			height: 800px;
+		}
+	</style>
+
+<script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<script src="js/jquery-1.11.1.min.js"></script>
+<!--webfonts-->
+<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900' rel='stylesheet' type='text/css'>
+   <!--//webfonts-->
+   <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+       <script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+				});
+			});
+		</script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+				/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+				*/
+		$().UItoTop({ easingType: 'easeOutQuart' });
+});
+</script>
+<!--light-box-files -->
+<script src="js/modernizr.custom.97074.js"></script>
+<script src="js/jquery.chocolat.js"></script>
+		<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+
+		<script type="text/javascript" charset="utf-8">
+		$(function() {
+			$('.g-left a').Chocolat();
+		});
+		</script>
+<!--light-box-files -->
+
+</head>
+<body>
+ <!-- header -->
+
+	 <!-- header-bottom -->
+	<div class="header-bottom">
+		<div class="container">
+		<div class="logo">
+			<h1><a href="index.html">有我陪你</a>
+		</div>
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<!--/.navbar-header-->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">首頁</a></li>
+ 						<li><a href="contact.html">服務地圖</a></li>
+ 						 <li><a href="about.html">即時媒合</a></li>
+ 						<li><a href="call.html">預約服務</a></li>
+             <li><a href="gallery.html">服務相簿</a></li>
+
+					</ul>
+				</div>
+				<!--/.navbar-collapse-->
+			</nav>
+			<div class="search-box">
+					<div id="sb-search" class="sb-search">
+						<form>
+							<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+							<input class="sb-search-submit" type="submit" value="">
+							<span class="sb-icon-search"> </span>
+							</form>
+					</div>
+				</div>
+					<div class="clearfix"> </div>
+
+				<!-- search-scripts -->
+					<script src="js/classie.js"></script>
+					<script src="js/uisearch.js"></script>
+					<script>
+						new UISearch( document.getElementById( 'sb-search' ) );
+					</script>
+				<!-- //search-scripts -->
+
+		</div>
+	</div>
+	<!-- /header-bottom -->
+
+<!-- header -->
+<!-- banner -->
+	<div class="banner-1">
+		<div class="container">
+		</div>
+	</div>
+<!-- banner -->
+	<div class="about1">
+			<div class="container">
+        	<div class="row">
+            <div id='map' class="col-md-8 contact-left"></div>
+            <section class="content">
+			<h1>即時媒合</h1>
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="pull-right">
+							<div class="btn-group">
+								<button type="button" class="btn btn-success btn-filter" data-target="pagado">已完成</button>
+								<button type="button" class="btn btn-warning btn-filter" data-target="pendiente">等待中</button>
+								<button type="button" class="btn btn-danger btn-filter" data-target="cancelado">服務中</button>
+								<button type="button" class="btn btn-default btn-filter" data-target="all">全部</button>
+							</div>
+						</div>
+						<div class="table-container">
+							<table class="table table-filter">
+								<tbody>
+                  <tr data-status="cancelado">
+										<td>
+											<div class="ckbox">
+												<input type="checkbox" id="checkbox1">
+												<label for="checkbox1"></label>
+											</div>
+										</td>
+                    <td>
+											<a href="javascript:;" class="star">
+											  <img src="images/7.jpg" class="media-photo">
+											</a>
+										</td>
+
+										<td>
+											<div class="media">
+
+												<div class="media-body">
+                          <a href="#" class="pull-left">
+
+                          </a>
+													<span class="media-meta pull-right">Febrero 13, 2016</span>
+													<h4 class="title">
+														李達(75)
+														<span class="pull-right cancelado">(服務中)</span>
+													</h4>
+													<p class="summary">書刊朗讀服務中(剩餘20分鐘) </p>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr data-status="pagado">
+										<td>
+											<div class="ckbox">
+												<input type="checkbox" id="checkbox1">
+												<label for="checkbox1"></label>
+											</div>
+										</td>
+                    <td>
+											<a href="javascript:;" class="star">
+											  <img src="images/8.jpg" class="media-photo">
+											</a>
+										</td>
+
+										<td>
+											<div class="media">
+
+												<div class="media-body">
+                          <a href="#" class="pull-left">
+
+                          </a>
+													<span class="media-meta pull-right">Febrero 13, 2016</span>
+													<h4 class="title">
+                            張坤(72)
+														<span class="pull-right pagado">(已完成)</span>
+													</h4>
+													<p class="summary">可自主活動，於2017/7/16 15:00完成陪伴購物服務30分鐘 </p>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr data-status="pendiente">
+										<td>
+											<div class="ckbox">
+												<input type="checkbox" id="checkbox3">
+												<label for="checkbox3"></label>
+											</div>
+										</td>
+										<td>
+											<a href="javascript:;" class="star">
+												  <img src="images/9.jpg" class="media-photo">
+											</a>
+										</td>
+										<td>
+											<div class="media">
+
+												<div class="media-body">
+                          <a href="#" class="pull-left">
+
+  												</a>
+													<span class="media-meta pull-right">Febrero 13, 2016</span>
+													<h4 class="title">
+														阿招(70)
+														<span class="pull-right pendiente">(等待中)</span>
+													</h4>
+													<p class="summary">具輕微糖尿病，我需要陪伴散步服務1小時(7/16 16:00前截止)</p>
+												</div>
+											</div>
+										</td>
+									</tr>
+
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">指派</button>
+
+                    </td>
+                    <td></td>
+                  </tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="content-footer">
+					<p>
+						Page © - 2016 <br>
+						Powered By <a href="https://www.facebook.com/tavo.qiqe.lucero" target="_blank">TavoQiqe</a>
+					</p>
+				</div>
+			</div>
+		</section>
+
+
+
+
+          </div>
+     </div>
+	</div>
+
+</div>
+<!-- footer -->
+	<div class="footer" id="contact">
+		<div class="container">
+				<div class="col-md-4 contact-left">
+					<h3>Address</h3>
+					<address>
+						  795 Folsom Ave, Suite 600<br>
+						  San Francisco, CA 94107<br>
+						  <abbr title="Phone">P :</abbr> (123) 456-7890
+						</address>
+				</div>
+				<div class="col-md-4 ftr-gd">
+					<h3>Follow Us</h3>
+					<ul class="social">
+						<li><a href="#"><i></i></a> </li>
+						<li><a href="#"><i class="facebook"></i></a></li>
+						<li><a href="#"><i class="goog"></i> </a></li>
+						<li><a href="#"><i class="lin"></i> </a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 contact-left">
+					<h3>Phone/Fax</h3>
+					<p>Phone : +1234567890 </p>
+					<p>Fax : +1234567890 </p>
+					<p>Email : <a href="mailto:info@example.com">info@mycompany.com</a> </p>
+				</div>
+				<div class="clearfix"></div>
+			<div class="copyright">
+			   <p>© 2015 Elders Care . All rights reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer -->
+	<a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 0;"></span> <span id="toTopHover" style="opacity: 0;"> </span></a>
+
+<!-- MODAL -->
+
+<!-- Trigger the modal with a button -->
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">指派陪伴服務</h4>
+      </div>
+      <div class="modal-body">
+
+        <form>
+
+          <div class="row">
+        <div class="col-sm-6 col-md-4">
+            <img src="images/9.jpg" alt="" class="img-rounded img-responsive">
+        </div>
+        <div class="col-sm-6 col-md-8">
+            <h4>
+                阿昭</h4>
+            <small><cite title="San Francisco, USA">嘉義縣美田村八德路100號<i class="glyphicon glyphicon-map-marker">
+            </i></cite></small>
+            <p>
+                <i class="glyphicon glyphicon-gift"></i>1946/3/8(70歲) 女
+                <br>
+                <i class="glyphicon glyphicon-envelope"></i>服務使用次數： 1次
+                <br>
+                <i class="glyphicon glyphicon-globe"></i>注意事項：有輕微糖尿病，應注意糖分攝取
+
+            </p>
+            <!-- Split button -->
+
+        </div>
+    </div>
+
+                            <div class="form-group">
+                              空閒志工（依照所在距離排序）
+                              <label for="exampleSelect1">空閒志工（依照所在距離排序）</label>
+                              <select class="form-control" id="exampleSelect1">
+                                <option>賴賴（距離500m)</option>
+                                <option>阿一（距離700m)</option>
+                                <option>丁寶（距離1.2km)</option>
+                                <option>張姐（距離1.5km)</option>
+
+                              </select>
+                            </div>
+
+                            <div class="form-group">
+                              其他備註
+                              <label for="exampleTextarea">其他備註</label>
+                              <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                            </div>
+
+
+
+                            <button type="submit" class="btn btn-primary">指派<button>
+
+
+
+                          <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+                          <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+                          <script>
+                          $( function() {
+                            $( "#datepicker" ).datepicker();
+                          } );
+                          </script>
+
+
+
+                </button></form>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- MODAL -->
+
+
+</body>
+<script>
+  var map = L.map('map').setView([23.473024,120.4411616], 15);
+
+  L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  var LeafIcon = L.Icon.extend({
+    options: {
+      shadowUrl: 'leaf-shadow.png',
+      iconSize:     [80, 50],
+      shadowSize:   [50, 64],
+      iconAnchor:   [22, 94],
+      shadowAnchor: [4, 62],
+      popupAnchor:  [-3, -76]
+    }
+  });
+
+  var greenIcon = new LeafIcon({iconUrl: 'images/9.jpg'}),
+    redIcon = new LeafIcon({iconUrl: 'images/5.jpg'}),
+    orangeIcon = new LeafIcon({iconUrl: 'images/7.jpg'});
+    yellowIcon = new LeafIcon({iconUrl: 'images/8.jpg'});
+
+  L.marker([23.4745999,120.4419183], {icon: greenIcon}).bindPopup("我需要陪伴散步服務1小時(7/16 16:00前截止)<br/> " + "<a href='https://mydeargrandson.herokuapp.com/services.html'> <img src='images/9.jpg' width='80' height='50' /> </a> " + "阿招(70):具輕微糖尿病").addTo(map);
+  L.marker([23.4710379,120.4404163], {icon: redIcon}).bindPopup("我需要陪伴就診服務4小時(7/16 11:00前截止)<br/> " + "<a href='#'> <img src='images/5.jpg' width='80' height='50' /> </a> " + "陳通(85):輪椅").addTo(map);
+  L.marker([23.472977,120.4403613], {icon: orangeIcon}).bindPopup("書刊朗讀服務中(剩餘20分鐘) <br/> " + "<a href='#'> <img src='images/7.jpg' width='80' height='50' /> </a> " + "李達(75):阿茲海默症 </br> 陪伴人員：<a href='#'>翰翰</a>").addTo(map);
+  L.marker([23.4671037,120.4439506], {icon: yellowIcon}).bindPopup("於2017/7/16 15:00完成陪伴購物服務30分鐘 <br/> " + "<a href='#'> <img src='images/8.jpg' width='80' height='50' /> </a> " + "張坤(72):可自主活動 </br> 陪伴人員：<a href='#'>賴賴</a>").addTo(map);
+
+  $(document).ready(function () {
+
+  	$('.star').on('click', function () {
+        $(this).toggleClass('star-checked');
+      });
+
+      $('.ckbox label').on('click', function () {
+        $(this).parents('tr').toggleClass('selected');
+      });
+
+      $('.btn-filter').on('click', function () {
+        var $target = $(this).data('target');
+        if ($target != 'all') {
+          $('.table tr').css('display', 'none');
+          $('.table tr[data-status="' + $target + '"]').fadeIn('slow');
+        } else {
+          $('.table tr').css('display', 'none').fadeIn('slow');
+        }
+      });
+
+   });
+</script>
+</html>
